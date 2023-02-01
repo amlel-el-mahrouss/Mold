@@ -4,9 +4,9 @@ void print_args()
 {
   import std.stdio;
 
-  writeln("mold, The Stupid Linker.");
-  writeln("--abi=<abi> {A-Out, Mach-O, ELF}");
-  writeln("--linker-version=<ver>");
+  writeln("mold, the modern linker.");
+  writeln("--abi=<abi> {A-Out, Mach-O}");
+  writeln("--abi-rev=<ver>");
 
 }
 

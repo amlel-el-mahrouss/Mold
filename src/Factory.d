@@ -35,7 +35,7 @@ final class XarFileMaker {
           AOutInstance.write_command(cmdHeader);
         }
 
-        writeln("Done: ./a.out is ready, see it by yourself.");
+        writeln("Done, see it by yourself.");
 
         return true;
       default:
