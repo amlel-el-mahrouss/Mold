@@ -1,3 +1,9 @@
+.project
+.cproject
+.settings/org.eclipse.cdt.codan.core.prefs
+.settings/org.eclipse.core.resources.prefs
+.settings/org.eclipse.core.runtime.prefs    
+
 # X archives
 *.xar
 
