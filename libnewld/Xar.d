@@ -16,22 +16,6 @@ struct XHelper {
     this.OldFile.seek(this.OldFileOffset);
 
     char[] old;
-
-    // TODO: write a binary format, with that exact same format.
-    // so we can use that readf.
-
-    /*
-      !<AR>\r\n
-      !ELF-MachO
-      !x86
-      %%%
-      *binary1*
-      %%
-      *binary2*
-      %%
-
-    */
-    
     this.OldFile.readf("%s\n%%\n", old);
     this.NewFile.write(old);
   }

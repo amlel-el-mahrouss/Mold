@@ -16,10 +16,8 @@ final class XarFileMaker {
 
     try {
       AOutInstance = new AOutBackend(Path);
-    } catch (FileException e) {
-      writeln("FileError: ", e.msg);
-    } catch (Exception e2) {
-      writeln("Error:", e2.msg);
+    } catch (Exception err) {
+      writeln("Error:", err.msg);
     }
   }
 
