@@ -4,9 +4,9 @@ void print_args()
 {
   import std.stdio;
 
-  writeln("mold, the modern linker.");
+  writeln("The modern linker");
   writeln("--abi=<abi> {A-Out, Mach-O}");
-  writeln("--abi-rev=<ver>");
+  writeln("--rev=<abi revision>");
 
 }
 
