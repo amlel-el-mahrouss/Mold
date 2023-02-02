@@ -22,12 +22,12 @@ final class AOutBackend
 
 	bool write_header(int arch, ExecutableInfo info) {
 		switch (arch) {
-		case Intel:
+		case Arch.INTEL64:
 		{
 			this.Fp.write(8086);
 			break;
 		}
-		case BerkeleyRisc:
+		case Arch.RISCV:
 		{
 		  	this.Fp.write(0xFEED);
 			break;

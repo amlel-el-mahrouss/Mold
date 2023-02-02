@@ -30,11 +30,11 @@ final class XarFileMaker {
 		if (cmdHdrs.empty()) return false;
 
 		switch (isa) {
-			case BerkeleyRisc:
-				AOutInstance.write_header(BerkeleyRisc, info);
+			case Arch.RISCV:
+				AOutInstance.write_header(Arch.RISCV, info);
 				break;
-			case Intel:
-				AOutInstance.write_header(BerkeleyRisc, info);
+			case Arch.INTEL64:
+				AOutInstance.write_header(Arch.RISCV, info);
 				break;
 			default:
 				throw new Exception("Unsupported ISA");

@@ -22,7 +22,7 @@ void main(string[] args) {
       import libnewld.binary_interface;
 
       auto output_file = args[2];
-      XarHelper.make_x_archive(output_file, ElfMachO, Intel);
+      XarHelper.make_x_archive(output_file, ElfMachO, Arch.INTEL64);
     }
   }
 }

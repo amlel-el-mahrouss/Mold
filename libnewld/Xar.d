@@ -43,11 +43,11 @@ final class XarHelper {
     import libnewld.binary_interface;
 
     switch (_arch) {
-      case BerkeleyRisc:
+      case Arch.RISCV:
         file.write("!RISC-V\r\n%%\r\n");
         break;
-      case AMD64:
-        file.write("!AMD64\r\n%%\r\n");
+      case Arch.INTEL64:
+        file.write("!Arch.INTEL64\r\n%%\r\n");
         break;
       default:
         file.write("!UNKWN\r\n%%\r\n");

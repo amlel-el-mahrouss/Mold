@@ -1,8 +1,6 @@
 module libnewld.binary_interface;
 
-enum Intel = 1;
-enum AMD64 = Intel;
-enum BerkeleyRisc = 2;
+enum Arch { INTEL64, RISCV, COUNT }
 
 struct ExecutableInfo {
 	ulong text;
