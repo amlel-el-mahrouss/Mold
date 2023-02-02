@@ -1,4 +1,4 @@
-module libnewld.streams;
+module libnewld.static_binary_stream;
 
 import std;
 

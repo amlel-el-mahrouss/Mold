@@ -10,6 +10,7 @@ void print_args()
 
 }
 
+// main entrypoint for our D linker.
 void main(string[] args) {
   import std.range, std.stdio;
 
@@ -20,8 +21,8 @@ void main(string[] args) {
       import mold.xar;
       import libnewld.binary_interface;
 
-      XarHelper.make_x_archive(args[2], ElfMachO, Intel);
-      writeln("xar is done.");
+      auto output_file = args[2];
+      XarHelper.make_x_archive(output_file, ElfMachO, Intel);
     }
   }
 }
