@@ -1,4 +1,4 @@
-module mold.factory;
+module libnewld.factory;
 
 import libnewld.aout_backend;
 import libnewld.binary_interface;
@@ -7,12 +7,15 @@ import libnewld.common_object_backend;
 final class XarFileMaker {
   private AOutBackend AOutInstance;
 
-  this(string Name) {
+  this(string Path) {
+	import std.range;
     import std.stdio;
     import std;
 
+	assert(!Path.empty());
+
     try {
-      AOutInstance = new AOutBackend(Name);
+      AOutInstance = new AOutBackend(Path);
     } catch (FileException e) {
       writeln("FileError: ", e.msg);
     } catch (Exception e2) {

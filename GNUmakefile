@@ -8,4 +8,4 @@ all:
 
 .PHONY: clean
 clean:
-	rm -f mold.elf libnewld.so
+	rm -f mold.elf libnewld.so $(wildcard *.o)

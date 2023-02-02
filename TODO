@@ -1,0 +1,8 @@
+TODO List
+=========
+
+try {
+	AOutInstance = new AOutBackend(Name);
+} catch (ThisOr<Exception, FileException> e2) {
+	writeln("Error:", e2.msg);
+}

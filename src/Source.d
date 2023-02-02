@@ -18,7 +18,7 @@ void main(string[] args) {
     print_args();
   } else {
     if (args.length == 3 && args[1] == "--make-xar-x86") {
-      import mold.xar;
+      import libnewld.xar;
       import libnewld.binary_interface;
 
       auto output_file = args[2];

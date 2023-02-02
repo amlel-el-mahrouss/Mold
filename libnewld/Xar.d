@@ -1,4 +1,4 @@
-module mold.xar;
+module libnewld.xar;
 
 import libnewld.aout_backend;
 import std.algorithm, std.stdio, std.file, std.range;
