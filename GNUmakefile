@@ -9,3 +9,7 @@ all:
 .PHONY: clean
 clean:
 	rm -f mold.elf libnewld.so $(wildcard *.o)
+
+.PHONY: dmd
+dmd:
+	sudo apt install dmd
