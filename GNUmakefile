@@ -12,4 +12,4 @@ clean:
 
 .PHONY: dmd
 dmd:
-	sudo snap install dmd
+	sudo snap install dmd --classic
