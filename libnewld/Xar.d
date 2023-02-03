@@ -27,7 +27,7 @@ enum ElfAOut = 2;
 final class XarHelper {
   static File make_x_archive(string _file, int _type, int _arch) {
     auto file = File(_file, "wb");
-    file.write("!<AR>\r\n");
+    file.write("!<XAR>\r\n");
     switch (_type) {
       case ElfMachO:
         file.write("!ELF-MachO\r\n%%\r\n");
