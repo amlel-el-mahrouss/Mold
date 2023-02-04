@@ -2,6 +2,10 @@
 libnewld:
 	dmd -oflibnewld.so -shared $(wildcard libnewld/*.d)
 
+.PHONY: libmips
+libmips:
+	dmd -oflibmips.so -shared $(wildcard libmips/*.d)
+
 .PHONY: all
 all:
 	dmd -ofmold.elf $(wildcard libnewld/*.d) $(wildcard src/*.d)
