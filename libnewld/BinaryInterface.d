@@ -1,6 +1,11 @@
 module libnewld.binary_interface;
 
-enum Arch { INTEL64, RISCV, MIPS, COUNT }
+enum Arch { 
+	INTEL64, 
+	RISCV, 
+	MIPS, 
+	COUNT 
+}
 
 struct ExecutableInfo {
 	ulong text;

@@ -77,3 +77,9 @@ nbdist/
 
 ## VSCode
 .vscode/settings.json
+
+# target
+mold
+
+# Binary Archive.
+*.ar

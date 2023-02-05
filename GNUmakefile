@@ -6,9 +6,9 @@ libnewld:
 libmips:
 	dmd -oflibmips.so -shared $(wildcard libmips/*.d)
 
-.PHONY: all
-all:
-	dmd -ofmold.elf $(wildcard libnewld/*.d) $(wildcard src/*.d)
+.PHONY: cli
+cli:
+	dmd -ofmold $(wildcard libnewld/*.d) $(wildcard src/*.d)
 
 .PHONY: clean
 clean:

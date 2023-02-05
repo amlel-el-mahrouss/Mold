@@ -1,9 +1,9 @@
-module libnewld.aout_backend;
+module libnewld.exec_backend;
 
 import libnewld.binary_interface;
 import std.algorithm, std.stdio, std.file, std.range;
 
-final class AOutBackend
+final class ExecBackend
 {
 	private string Name;
 	private File Fp;
@@ -11,7 +11,7 @@ final class AOutBackend
 	this(string Name) {
 		this.Name = Name;
 		if (this.Name.empty())
-			throw new Exception("No Such File");
+			throw new Exception("Bad filename!");
 
 		this.Fp = File(Name, "wb");
 	}

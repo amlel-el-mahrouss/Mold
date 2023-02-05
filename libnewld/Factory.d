@@ -1,11 +1,10 @@
 module libnewld.factory;
 
-import libnewld.aout_backend;
+import libnewld.exec_backend;
 import libnewld.binary_interface;
-import libnewld.common_object_backend;
 
 final class XarFileMaker {
-	private AOutBackend AOutInstance;
+	private ExecBackend AOutInstance;
 
 	this(string Path) {
 		import std.range;
@@ -15,7 +14,7 @@ final class XarFileMaker {
 		assert(!Path.empty());
 
 		try {
-			AOutInstance = new AOutBackend(Path);
+			AOutInstance = new ExecBackend(Path);
 		} catch (FileException err) {
 			writeln("FileError: ", err.msg);
 		} catch (Exception err) {
