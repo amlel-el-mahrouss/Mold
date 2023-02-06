@@ -8,11 +8,15 @@ final class MIPSIntrusctionFactory {
 		if (OutName.empty())
 			throw new Exception("XARException: Bad 'OutName'");
 
-		this.Fp = File(OutName ~ ".mips.xar", "wb");
+		this.Fp = File(OutName ~ ".mips.xar", this.restrict());
 	}
 
 	void seek(ulong off) { 
 		this.Fp.seek(off); 
+	}
+
+	string restrict() {
+		return ("wb");
 	}
 
 	void make_imm_opcode(int op, int rs, int rt, int imm) {
