@@ -12,7 +12,7 @@ cli:
 
 .PHONY: clean
 clean:
-	rm -f mold.elf libnewld.so $(wildcard *.o)
+	rm -f mold $(wildcard *.o) $(wildcard *.so) $(wildcard *.xar)
 
 .PHONY: dmd
 dmd:

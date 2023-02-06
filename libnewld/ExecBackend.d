@@ -1,6 +1,6 @@
 module libnewld.exec_backend;
 
-import libnewld.binary_interface;
+import libnewld.exec_info;
 import std.algorithm, std.stdio, std.file, std.range;
 
 final class ExecBackend
@@ -38,24 +38,28 @@ final class ExecBackend
 		}
 		}
 
-		this.Fp.write(info.text);
-		this.Fp.write(info.data);
-		this.Fp.write(info.bss);
-		this.Fp.write(info.syms);
-		this.Fp.write(info.entry);
-		this.Fp.write(info.trsize);
-		this.Fp.write(info.drsize);
+		this.Fp.write(info.Text);
+		this.Fp.write(info.Data);
+		this.Fp.write(info.Bss);
+		this.Fp.write(info.Syms);
+		this.Fp.write(info.Entry);
+		this.Fp.write(info.Trsize);
+		this.Fp.write(info.Drsize);
 
 		return true;
 	}
 
-	void write_command(ExecutableCmdHeader info) {
-		if (info.sz == 0) return;
+	bool write_segment(ExecutableCmdHeader info) {
+		if (info.Sz == 0) return false;
 
-		this.Fp.write(info.sz);
-		this.Fp.write(info.type);
-		this.Fp.write(info.info); // specific info about the segment.
-		this.Fp.write(info.start); // start offset
+		this.Fp.write(info.Sz);
+		this.Fp.write(info.Type);
+		this.Fp.write(info.Resv); // specific info about the segment.
+		
+		this.Fp.seek(info.Off);
+		this.Fp.write(info.Start); // start offset
+
+		return true;
 	}
 
 	// (type == 0) = true then __TEXT

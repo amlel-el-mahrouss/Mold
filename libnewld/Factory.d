@@ -1,7 +1,7 @@
 module libnewld.factory;
 
 import libnewld.exec_backend;
-import libnewld.binary_interface;
+import libnewld.exec_info;
 
 final class XarFileMaker {
 	private ExecBackend AOutInstance;
@@ -41,7 +41,8 @@ final class XarFileMaker {
 		}
 
 		foreach (cmdHeader; cmdHdrs) {
-			AOutInstance.write_command(cmdHeader);
+			if (!AOutInstance.write_segment(cmdHeader))
+				return false;
 		}
 
 		return true;

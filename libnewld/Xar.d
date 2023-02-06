@@ -24,7 +24,7 @@ final class XarHelper {
         break;
     }
 
-    import libnewld.binary_interface;
+    import libnewld.exec_info;
 
     switch (_arch) {
       case Arch.RISCV:

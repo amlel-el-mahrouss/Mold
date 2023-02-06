@@ -21,7 +21,7 @@ void main(string[] args) {
 	} else {
 		if (args.length == 3) {
 			import libnewld.xar;
-			import libnewld.binary_interface;
+			import libnewld.exec_info;
 
 			auto output_file = args[2];
 
